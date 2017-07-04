@@ -1,0 +1,34 @@
+.StreamList {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.StreamListItem {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 5px;
+
+  &:hover {
+    background-color: $carrot;
+  }
+
+  &.is_complete {
+    text-decoration: line-through;
+  }
+
+  .StreamListItem-preview {
+    width: 300px;
+    height: 250px;
+  }
+}
