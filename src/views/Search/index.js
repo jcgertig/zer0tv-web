@@ -13,6 +13,7 @@ class Search extends Component {
   static propTypes = {
     search: PropTypes.func,
     streams: PropTypes.array, // eslint-disable-line react/forbid-prop-types
+    count: PropTypes.number,
   };
 
   state = {
@@ -28,7 +29,7 @@ class Search extends Component {
     const { streams, count } = this.props;
     const { result } = this.state;
     return (
-      <div className="Home">
+      <div className="Search">
         <SearchTypeahead value={this.state.result} onSelect={this.handleSelect} />
         {result && (
           <img
